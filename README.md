@@ -1,33 +1,39 @@
-# Introduction
+# 🐱 Cat or Not?  
 
-This project is a simple machine learning model that can tell whether an image contains a cat or not a cat.
+A simple machine learning project that predicts whether an image contains a **cat** 🐾 or **not a cat** 🚫.  
+It uses a **logistic regression model**, trained from scratch, and provides a **Streamlit web app** for easy image testing.  
 
-#steps:
-- step: Clone the project
-  command: |
-  git clone https://github.com/your-username/cat-or-not.git
-  cd cat-or-not
+---
 
-- step: Create virtual environment
-  command: |
-  python -m venv venv
+## 📦 Setup Instructions  
 
-- step: Install dependencies
-  command: |
-  pip install -r requirements.txt
+# 1️⃣ Clone the Repository
+git clone https://github.com/your-username/cat-or-not.git
+cd cat-or-not
 
-- step: Train the model
-  command: |
-  python train.py
-  result: |
+# 2️⃣ Create & Activate Virtual Environment
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
 
-  - Trains logistic regression model
-  - Saves weights to model_params.npz
-  - Generates cost_curve.png
+# 3️⃣ Install Dependencies
+pip install -r requirements.txt
 
-- step: Run the Streamlit app
-  command: |
-  streamlit run app.py
-  result: |
-  Open the provided local URL in browser.
-  Upload any image → get "Cat" or "Not a Cat" prediction.
+# Training the Model
+python train.py
+
+# Running the Program
+streamlit run app.py
+
+
+#Project Structure
+cat-or-not/
+├── app.py              # Streamlit web app
+├── train.py            # Model training script
+├── model_params.npz    # Saved model weights
+├── cost_curve.png      # Training visualization
+├── requirements.txt    # Project dependencies
+└── README.md           # Project documentation
+
